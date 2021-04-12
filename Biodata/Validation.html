@@ -1,21 +1,44 @@
 <html>
+  <head>
+    <style></style>
+    <title>BIODATA PROJECT</title>
+  </head>
  <body>
-  <form>
-  
+   <script>
+     function validate()
+     {
+       var nameValue=document.getElementById("name").value;
+       var dob=document.getElementById("dob").value;
+       if(nameValue === ''||dob ==='')
+       {
+         alert("SORRY... YOU ARE NOT ELIGIBLE ")
+         return false;
+       }
+       else
+       {
+        true;
+         alert("GOOD... YOU ARE UNDER OUR WAITING LIST")
+       }
+         
+       }
+     
+   </script>
+   <form>
+    <div style="background-image: url(Kamatchi01.jpeg);background-size: cover">
    NAME
-   <input type="text" id="name" placeholder="name"size="30">
+   <input type="text" id="name"size="30">
    <br><br>
   
    DOB
-   <input type="number">
+   <input type="number" id="dob">
    <br><br>
    
    IMAGE<br>
-   <input type="file">  
+   <input type="file">
    <br><br>
 
    FATHER NAME
-   <input type="text" >
+   <input type="text">
    <br><br>
   
    PHONE
@@ -91,9 +114,10 @@
    <input type="num" name="Salary" maxlength="06">
    <br><br>
    
-   <input type="Reset" value="Reset">
-   <a href="login.html"><input type="Submit" value="Submit Form"></a>
-   
+   <input type="reset" value="Reset">
+   <input type="button" onclick="validate()" value="Submit"/>
+    </div>
    </form>
  </body>
 </html>
+
